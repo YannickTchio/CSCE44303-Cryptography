@@ -21,3 +21,12 @@ It includes:
 The program can be run in the terminal or vscode with: 
 
 **python3 main.py**
+
+Example: After Running, 
+**Encript (key=3)**
+                   . Input: Hello, World!
+                   . Output: Khoor, Zruog!
+
+**Decrypt (key=3)**
+                  . Input: Khoor, Zroug!
+                  . Output: Hello, World!
