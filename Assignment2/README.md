@@ -178,7 +178,3 @@ From benchmarking results:
 ## References
 
 - [PyCryptodome Documentation](https://pycryptodome.readthedocs.io/)
-- [AES (Advanced Encryption Standard)](https://en.wikipedia.org/wiki/Advanced_Encryption_Standard)
-- [RSA (Rivest–Shamir–Adleman)](https://en.wikipedia.org/wiki/RSA_(cryptosystem))
-- [PKCS#1 OAEP Padding](https://en.wikipedia.org/wiki/Optimal_asymmetric_encryption_padding)
-
