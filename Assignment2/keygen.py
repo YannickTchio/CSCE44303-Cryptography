@@ -1,0 +1,4 @@
+- Generates AES-128 shared secret key for symmetric encryption
+- Creates RSA-2048 key pair (public/private keys)
+- Initializes empty ctext file for encrypted messages
+- Required setup step before running encryption programs
