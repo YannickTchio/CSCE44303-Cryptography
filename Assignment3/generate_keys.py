@@ -20,7 +20,7 @@ with open('alice_public.pem', 'wb') as f:
     f.write(key.publickey().export_key())
 print("Generated alice_public.pem done")
 
-# Create empty files
+# Create 2 empty files
 open('mactext', 'wb').close()
 print("Created empty mactext")
 
