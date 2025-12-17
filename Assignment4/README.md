@@ -1,4 +1,4 @@
-                    <b>Assignment 4: Password Cracking & Salted Hash Analysis</b>
+                    __Assignment 4: Password Cracking & Salted Hash Analysis__
 Project Overview
 
 This project implements a dictionary-based password cracking tool to analyze the security differences between unsalted and salted password hashing. The program simulates real-world password storage systems using SHA-256 and demonstrates how the use of salts impacts the effectiveness and performance of dictionary attacks.
