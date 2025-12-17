@@ -1,33 +1,88 @@
-Assignment 4 – Password Cracker (CSCE 44303)
+                    **Assignment 4: Password Cracking & Salted Hash Analysis**
+Project Overview
 
-This project implements a Python based dictionary attack tool for cracking unsalted and salted SHA-256 password hashes, as required for Assignments 4 in CSCE 44303 (Cryptography). The goal of this assignment was to demonstrate how salting passwords increases resistance to dictionary attacks by comparing attack behavior and execution time.
+This project implements a dictionary-based password cracking tool to analyze the security differences between unsalted and salted password hashing. The program simulates real-world password storage systems using SHA-256 and demonstrates how the use of salts impacts the effectiveness and performance of dictionary attacks.
 
-The program supports two modes:
+The program supports two attack modes:
 
-Part 1 (Unsalted): Cracks passwords stored as SHA256(password)
+Unsalted password cracking
 
-Part 2 (Salted): Cracks passwords stored as SHA256(password || salt), where the salt is a 32-bit random value
+Salted password cracking
 
-The program generates all possible passwords of length N using the allowed character set and compares their SHA-256 hashes against those in the input file. When a match is found, the plaintext password is recovered and displayed. The total execution time is measured and printed.
+For each mode, the program attempts to recover plaintext passwords and reports the total execution time required to complete the attack.
 
-How I Tested My Work
+Features
+Part 1: Unsalted Password Cracking
+
+Cracks passwords stored as SHA256(password)
+
+Performs a dictionary attack using all possible passwords of length N
+
+Uses SHA-256 hashing
+
+Recovers and prints all plaintext passwords
+
+Measures total attack time
+
+Part 2: Salted Password Cracking
+
+Cracks passwords stored as SHA256(password || salt)
+
+Uses a 32-bit random salt for each user
+
+Demonstrates resistance to precomputed dictionary attacks
+
+Recovers and prints all plaintext passwords
+
+Measures total attack time
+
+Technologies Used
+
+Language: Python 3
+
+Libraries:
+
+hashlib — SHA-256 hashing
+
+time — execution time measurement
+
+itertools — password generation
+
+Project Structure
+Assignment_4/
+├── password_cracker.py     # Main password cracking program
+├── part1_test.txt          # Unsalted password test file
+├── part2_test.txt          # Salted password test file
+├── Plaintext_passwords.txt # Password dictionary
+└── README.md               # This file
+
+Usage
+Run the Program
+python3 password_cracker.py
+
+
+The program will prompt the user to select an attack mode:
+
+1 - Part 1 (unsalted)
+2 - Part 2 (salted)
+
+
+The user then provides:
+
+Input filename
+
+Password length N
+
+Testing
 Part 1 – Unsalted Passwords
 
-The program was executed using the provided test file part1_test.txt with password length N = 3.
+The program was tested using part1_test.txt with password length N = 3.
 
-python3 password_cracker.py
-Choose option 1 or 2: 1
-Enter file name: part1_test.txt
-Enter password length N: 3
+Total passwords tested: 314,432
 
+All passwords successfully recovered
 
-Result:
-
-All five passwords were successfully recovered
-
-Total password space tested: 314,432
-
-Execution time: 0.344 seconds
+Total execution time: 0.344 seconds
 
 Recovered passwords:
 
@@ -43,34 +98,61 @@ user5 → ulX
 
 Part 2 – Salted Passwords
 
-The program was then tested using the salted password file part2_test.txt with the same password length N = 3.
+The program was tested using part2_test.txt with password length N = 3.
 
-python3 password_cracker.py
-Choose option 1 or 2: 2
-Enter file name: part2_test.txt
-Enter password length N: 3
+Total passwords tested: 314,432
 
-
-Result:
-
-All salted passwords were successfully recovered
-
-Each password was cracked using its corresponding salt
+All salted passwords successfully recovered
 
 Total execution time: 0.262 seconds
 
 Recovered passwords:
 
-user1 (salt = 2d94f04d) → j$D
+user1 → j$D
 
-user2 (salt = eefa0a75) → 2zP
+user2 → 2zP
 
-user3 (salt = 56edf6f9) → uEL
+user3 → uEL
 
-user4 (salt = ad9a7b1e) → dWa
+user4 → dWa
 
-user5 (salt = dc3180e9) → RIV
+user5 → RIV
 
-Summary
+Example Output
+PART 1: UNSALTED
+Total passwords to try: 314432
+Time used: 0.344 seconds
 
-This project successfully demonstrates the effectiveness of dictionary attacks against unsalted password hashes and shows how salting alters the attack process. The program correctly recovers all passwords in both test cases and reports accurate execution times, meeting all assignment requirements.
+PART 2: SALTED
+Total passwords to try: 314432
+Total time: 0.262 seconds
+
+Assignment Requirements Met
+
+✅ Dictionary attack implementation
+
+✅ SHA-256 hashing
+
+✅ Unsalted and salted password cracking
+
+✅ Execution time measurement
+
+✅ Command-line interaction
+
+✅ Grader-provided file support
+
+Security Insights
+
+Unsalted password hashes are vulnerable to fast dictionary attacks
+
+Salting passwords prevents precomputed attacks and increases attack complexity
+
+Even small password lengths result in large search spaces
+
+Salting improves security without significant system overhead
+
+References
+
+Python hashlib Documentation
+
+CSCE 44303 Cryptography Course Materials
