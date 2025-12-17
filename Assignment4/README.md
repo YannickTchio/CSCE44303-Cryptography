@@ -43,8 +43,8 @@ itertools — password generation
 
 ## Project Structure
 
-Assignment_4/
-│
+Assignment_4/│
+
 ├── password_cracker.py          
 │   └── Main program implementing dictionary attacks for both unsalted and salted passwords
 │
