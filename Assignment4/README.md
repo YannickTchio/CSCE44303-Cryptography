@@ -43,6 +43,7 @@ itertools — password generation
 
 ## Project Structure
 Assignment_4/
+
 ├── password_cracker.py     # Main password cracking program
 ├── part1_test.txt          # Unsalted password test file
 ├── part2_test.txt          # Salted password test file
