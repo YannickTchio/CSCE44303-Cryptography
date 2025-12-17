@@ -9,37 +9,37 @@ For each mode, the program attempts to recover plaintext passwords and reports t
 
 ## Part 1: Unsalted Password Cracking
 
-Cracks passwords stored as SHA256(password)
+- Cracks passwords stored as SHA256(password)
 
-Performs a dictionary attack using all possible passwords of length N
+- Performs a dictionary attack using all possible passwords of length N
 
-Uses SHA-256 hashing
+- Uses SHA-256 hashing
 
-Recovers and prints all plaintext passwords
+- Recovers and prints all plaintext passwords
 
-Measures total attack time
+- Measures total attack time
 
 ## Part 2: Salted Password Cracking
 
-Cracks passwords stored as SHA256(password || salt)
+- Cracks passwords stored as SHA256(password || salt)
 
-Uses a 32-bit random salt for each user
+- Uses a 32-bit random salt for each user
 
-Demonstrates resistance to precomputed dictionary attacks
+- Demonstrates resistance to precomputed dictionary attacks
 
-Recovers and prints all plaintext passwords
+- Recovers and prints all plaintext passwords
 
-Measures total attack time
+- Measures total attack time
 
 ## Technologies Used Language: Python 3
 
 Libraries:
 
-hashlib — SHA-256 hashing
+- hashlib — SHA-256 hashing
 
-time — execution time measurement
+- time — execution time measurement
 
-itertools — password generation
+- itertools — password generation
 
 ## Project Structure
 
@@ -61,9 +61,9 @@ The program will prompt the user to select an attack mode:
 
 The user then provides:
 
-Input filename
+- Input filename
 
-Password length N
+- Password length N
 
 ## Testing
 ## Part 1 – Unsalted Passwords
@@ -78,15 +78,15 @@ Total execution time: 0.344 seconds
 
 Recovered passwords:
 
-user1 → fZ0
+- user1 → fZ0
 
-user2 → #Hr
+- user2 → #Hr
 
-user3 → mpj
+- user3 → mpj
 
-user4 → Y&m
+- user4 → Y&m
 
-user5 → ulX
+- user5 → ulX
 
 ## Part 2 – Salted Passwords
 
@@ -100,15 +100,15 @@ Total execution time: 0.262 seconds
 
 Recovered passwords:
 
-user1 → j$D
+- user1 → j$D
 
-user2 → 2zP
+- user2 → 2zP
 
-user3 → uEL
+- user3 → uEL
 
-user4 → dWa
+- user4 → dWa
 
-user5 → RIV
+- user5 → RIV
 
 ## Example Output
 PART 1: UNSALTED
@@ -135,13 +135,13 @@ Assignment Requirements Met
 
 ## Security Insights
 
-Unsalted password hashes are vulnerable to fast dictionary attacks
+- Unsalted password hashes are vulnerable to fast dictionary attacks
 
-Salting passwords prevents precomputed attacks and increases attack complexity
+- Salting passwords prevents precomputed attacks and increases attack complexity
 
-Even small password lengths result in large search spaces
+- Even small password lengths result in large search spaces
 
-Salting improves security without significant system overhead
+- Salting improves security without significant system overhead
 
 ## References
 
