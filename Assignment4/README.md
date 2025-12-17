@@ -42,13 +42,23 @@ time — execution time measurement
 itertools — password generation
 
 ## Project Structure
-Assignment_4/
 
-├── password_cracker.py     # Main password cracking program
-├── part1_test.txt          # Unsalted password test file
-├── part2_test.txt          # Salted password test file
-├── Plaintext_passwords.txt # Password dictionary
-└── README.md               # This file
+Assignment_4/
+│
+├── password_cracker.py          
+│   └── Main program implementing dictionary attacks for both unsalted and salted passwords
+│
+├── part1_test.txt               
+│   └── Format: [username, sha256_hash]
+│
+├── part2_test.txt               
+│   └── Format: [username, salt_hex, sha256_hash]
+│
+├── Plaintext_passwords.txt      
+│   └── Contains all recovered passwords from test files
+│
+└── README.md                    
+    └── Complete project documentation
 
 Usage
 ## Run the Program: python3 password_cracker.py
