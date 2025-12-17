@@ -1,18 +1,13 @@
-                   ## ASSIGNMENT 4: PASSWORD CRACKING & SALTED HASH ANALYSIS
-Project Overview
+## ASSIGNMENT 4: PASSWORD CRACKING & SALTED HASH ANALYSIS
+## Project Overview
 
 This project implements a dictionary-based password cracking tool to analyze the security differences between unsalted and salted password hashing. The program simulates real-world password storage systems using SHA-256 and demonstrates how the use of salts impacts the effectiveness and performance of dictionary attacks.
 
-The program supports two attack modes:
-
-Unsalted password cracking
-
-Salted password cracking
+The program supports two attack modes: Unsalted password cracking &  Salted password cracking
 
 For each mode, the program attempts to recover plaintext passwords and reports the total execution time required to complete the attack.
 
-Features
-Part 1: Unsalted Password Cracking
+## Part 1: Unsalted Password Cracking
 
 Cracks passwords stored as SHA256(password)
 
@@ -24,7 +19,7 @@ Recovers and prints all plaintext passwords
 
 Measures total attack time
 
-Part 2: Salted Password Cracking
+## Part 2: Salted Password Cracking
 
 Cracks passwords stored as SHA256(password || salt)
 
@@ -36,9 +31,7 @@ Recovers and prints all plaintext passwords
 
 Measures total attack time
 
-Technologies Used
-
-Language: Python 3
+## Technologies Used Language: Python 3
 
 Libraries:
 
@@ -48,7 +41,7 @@ time — execution time measurement
 
 itertools — password generation
 
-Project Structure
+## Project Structure
 Assignment_4/
 ├── password_cracker.py     # Main password cracking program
 ├── part1_test.txt          # Unsalted password test file
@@ -57,8 +50,7 @@ Assignment_4/
 └── README.md               # This file
 
 Usage
-Run the Program
-python3 password_cracker.py
+## Run the Program: python3 password_cracker.py
 
 
 The program will prompt the user to select an attack mode:
@@ -73,10 +65,10 @@ Input filename
 
 Password length N
 
-Testing
-Part 1 – Unsalted Passwords
+## Testing
+## Part 1 – Unsalted Passwords
 
-The program was tested using part1_test.txt with password length N = 3.
+## The program was tested using part1_test.txt with password length N = 3.
 
 Total passwords tested: 314,432
 
@@ -96,9 +88,9 @@ user4 → Y&m
 
 user5 → ulX
 
-Part 2 – Salted Passwords
+## Part 2 – Salted Passwords
 
-The program was tested using part2_test.txt with password length N = 3.
+## The program was tested using part2_test.txt with password length N = 3.
 
 Total passwords tested: 314,432
 
@@ -118,7 +110,7 @@ user4 → dWa
 
 user5 → RIV
 
-Example Output
+## Example Output
 PART 1: UNSALTED
 Total passwords to try: 314432
 Time used: 0.344 seconds
@@ -141,7 +133,7 @@ Assignment Requirements Met
 
 ✅ Grader-provided file support
 
-Security Insights
+## Security Insights
 
 Unsalted password hashes are vulnerable to fast dictionary attacks
 
@@ -151,7 +143,7 @@ Even small password lengths result in large search spaces
 
 Salting improves security without significant system overhead
 
-References
+## References
 
 Python hashlib Documentation
 
